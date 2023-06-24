@@ -20,9 +20,9 @@ describe('Mocking modules', () => {
     it('should return mocked value for native module', async () => {
       const value = 'test';
 
-      const file = await fs.readFile('index.md');
+      const fileContent = await fs.readFile('index.md');
 
-      expect(file).toEqual(value);
+      expect(fileContent).toEqual(value);
     });
   });
 });
