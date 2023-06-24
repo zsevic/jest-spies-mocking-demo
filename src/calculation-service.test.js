@@ -141,9 +141,7 @@ describe('Calculation service', () => {
       const secondValue = 3;
       const spy = jest.spyOn(calculationService, 'calculate');
 
-      await expect(
-        calculateSomething(calculationService, firstValue, secondValue)
-      );
+      await calculateSomething(calculationService, firstValue, secondValue);
 
       expect(spy).toHaveBeenCalledWith(firstValue, secondValue);
     });
@@ -154,7 +152,7 @@ describe('Calculation service', () => {
       expect(spy).not.toHaveBeenCalledWith();
     });
 
-    it('should spy for methods arguments', async () => {
+    it('should spy methods arguments for multiple times called methods', async () => {
       const firstValue = 0;
       const secondValue = 1;
       jest
